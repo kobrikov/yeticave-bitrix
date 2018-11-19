@@ -1,10 +1,13 @@
 <?if (!defined ("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
+<?use Bitrix\Main\Page\Asset;?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <?$APPLICATION->ShowHead();?>
-    <link href="<?=SITE_TEMPLATE_PATH?>/css/normalize.min.css" rel="stylesheet">
-    <link href="<?=SITE_TEMPLATE_PATH?>/css/style.css" rel="stylesheet">
+    <?
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/normalize.min.css");
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
+    ?>
     <title><?$APPLICATION->ShowTitle();?></title>
 </head>
 <body>
