@@ -2,6 +2,7 @@
 !index.php
 !.bottom.menu.php
 !/local/
+!/upload/
 !/bitrix/
 /bitrix/*
 !/bitrix/backup/
