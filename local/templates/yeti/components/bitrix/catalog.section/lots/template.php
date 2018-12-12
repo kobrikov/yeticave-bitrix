@@ -9,7 +9,13 @@
         $productID = $arElement["ID"];
         $arBasePrice = CPrice::GetBasePrice($productID);
         ?>
-        <li class="lots__item lot">
+        <?
+        $uniqueId = $arElement["ID"] . '_' . md5($this->randString() . $component->getAction());
+        $areaId = $this->GetEditAreaId($uniqueId);
+        $this->AddEditAction($uniqueId, $arElement["EDIT_LINK"], $elementEdit);
+        $this->AddDeleteAction($uniqueId, $arElement["DELETE_LINK"], $elementDelete, $elementDeleteParams);
+        ?>
+        <li id="<?=$areaId?>" class="lots__item lot">
             <div class="lot__image">
                 <img src="<?=$arElement["DETAIL_PICTURE"]["SRC"]?>" width="350" height="260" alt="Сноуборд">
             </div>
