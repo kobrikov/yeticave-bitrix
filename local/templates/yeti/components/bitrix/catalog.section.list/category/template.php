@@ -11,7 +11,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
         <li id="<?=$this->GetEditAreaId($arSection['ID']);?>" class="promo__item promo__item--<?=$arSection["CODE"];?>">
-            <a class="promo__link" href="all-lots.html"><?=$arSection["NAME"];?></a>
+            <a class="promo__link" href="<?=$arSection['SECTION_PAGE_URL']?>"><?=$arSection["NAME"];?></a>
         </li>
     <?endforeach;?>
 </ul>

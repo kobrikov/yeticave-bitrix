@@ -3,9 +3,9 @@
 <nav class="nav">
     <ul class="nav__list container">
         <?foreach ($arResult as $arItem):?>
-        <li class="nav__item">
-            <a href="all-lots.html"><?=$arItem["TEXT"];?></a>
-        </li>
+            <li class="nav__item">
+                <a href="<?=$arItem['LINK']?>"><?=$arItem["TEXT"];?></a>
+            </li>
         <?endforeach;?>
     </ul>
 </nav>
